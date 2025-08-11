@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "UnityMCP": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/qusaiabushanap/dev/amani/unity-mcp/UnityMcpServer/src",
+        "server.py"
+      ]
+    },
+    "ScenarioMCP": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/qusaiabushanap/dev/amani/scenario-mcp/src",
+        "server.py"
+      ]
+    }
+  }
+}
