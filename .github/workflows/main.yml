@@ -1,0 +1,132 @@
+name: Build and Deploy Unity WebGL to Vercel
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  testRunner:
+    name: Test Unity Project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache
+        uses: actions/cache@v4
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+
+      - name: Restore Library cache
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-test-project
+          restore-keys: |
+            Library-test-project-
+            Library-
+
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v4
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+  buildWebGL:
+    needs: testRunner
+    name: Build Unity WebGL
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache
+        uses: actions/cache@v4
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+
+      - name: Restore Library cache
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-build-WebGL
+          restore-keys: |
+            Library-build-
+            Library-
+
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        with:
+          targetPlatform: WebGL
+          buildName: Build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-WebGL
+          path: build/WebGL
+
+  deployToVercel:
+    needs: buildWebGL
+    name: Deploy to Vercel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download WebGL Build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-WebGL
+          path: public
+
+      - name: Display structure of downloaded files
+        run: ls -la public/Build/
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel
+        run: |
+          if [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == "refs/heads/main" ]]; then
+            vercel --token=${{ secrets.VERCEL_TOKEN }} --prod
+          else
+            vercel --token=${{ secrets.VERCEL_TOKEN }}
+          fi
