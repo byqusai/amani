@@ -14,9 +14,17 @@
       "args": [
         "run",
         "--directory",
-        "/Users/qusaiabushanap/dev/amani/scenario-mcp/src",
-        "server.py"
-      ]
+        "/Users/qusaiabushanap/dev/amani/scenario-mcp",
+        "python",
+        "src/minimal_mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "/Users/qusaiabushanap/dev/amani/scenario-mcp/src"
+      }
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
     }
   }
 }

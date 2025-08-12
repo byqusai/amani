@@ -3,7 +3,7 @@
 from typing import Optional, List, Dict, Any, Union
 from datetime import datetime
 from pydantic import BaseModel, Field
-from .enums import GenerationStatus, ModelCategory
+from enums import GenerationStatus, ModelCategory
 
 
 class AssetInfo(BaseModel):

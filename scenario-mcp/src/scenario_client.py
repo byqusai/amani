@@ -6,12 +6,12 @@ import structlog
 from typing import Dict, Any, List, Optional, Union
 from datetime import datetime
 
-from .config import config
-from .utils.auth import AuthenticationManager
-from .utils.async_utils import RetryableHTTPClient, poll_until_complete
-from .models.requests import *
-from .models.responses import *
-from .exceptions import *
+from config import config
+from utils.auth import AuthenticationManager
+from utils.async_utils import RetryableHTTPClient, poll_until_complete
+from models.requests import *
+from models.responses import *
+from exceptions import *
 
 logger = structlog.get_logger(__name__)
 

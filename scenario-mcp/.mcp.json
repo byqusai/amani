@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "ScenarioMCP": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/Users/qusaiabushanap/dev/amani/scenario-mcp",
+        "src/simple_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "/Users/qusaiabushanap/dev/amani/scenario-mcp/src"
+      }
+    }
+  }
+}

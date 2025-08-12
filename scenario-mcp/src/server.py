@@ -9,11 +9,15 @@ import sys
 
 from mcp.server.fastmcp import FastMCP, Context
 
-from .config import config
-from .utils.auth import AuthenticationManager
-from .scenario_client import ScenarioAPIClient
-from .tools import register_all_tools
-from .exceptions import ScenarioMCPError
+import sys
+import os
+sys.path.insert(0, os.path.dirname(__file__))
+
+from config import config
+from utils.auth import AuthenticationManager
+from scenario_client import ScenarioAPIClient
+from tools import register_all_tools
+from exceptions import ScenarioMCPError
 
 # Configure logging
 structlog.configure(

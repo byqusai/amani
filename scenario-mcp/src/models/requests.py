@@ -2,7 +2,7 @@
 
 from typing import Optional, List, Dict, Any, Union
 from pydantic import BaseModel, Field, validator
-from .enums import SchedulerType, ControlNetType, ModelType, AssetOrganization
+from enums import SchedulerType, ControlNetType, ModelType, AssetOrganization
 
 
 class TextToImageRequest(BaseModel):
