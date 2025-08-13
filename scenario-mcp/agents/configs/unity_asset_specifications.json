@@ -1,0 +1,381 @@
+{
+  "unity_asset_types": {
+    "environmental": {
+      "skyboxes": {
+        "models": ["scenario_skybox_realistic", "scenario_skybox_fantasy", "scenario_skybox_stylized"],
+        "format": "panoramic_hdr",
+        "resolution": "4096x2048",
+        "unity_import": "cubemap",
+        "shader": "Skybox/Cubemap",
+        "lighting_contribution": true,
+        "webgl_optimized": true,
+        "compression": "high_quality"
+      },
+      "textures_materials": {
+        "models": ["scenario_texture_realistic", "scenario_texture_stylized", "scenario_texture_cartoon"],
+        "format": "pbr_set",
+        "resolution": "1024x1024",
+        "maps_included": ["albedo", "normal", "metallic", "height", "ao", "roughness"],
+        "unity_import": "material",
+        "shader": "Standard",
+        "seamless_tiling": true,
+        "materialize_compatible": true
+      },
+      "platformer_props": {
+        "models": ["scenario_platformer_props", "scenario_2d_environment"],
+        "format": "png_transparent",
+        "resolution": "512x512",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "pivot_point": "bottom_center",
+        "pixels_per_unit": 100
+      },
+      "buildings": {
+        "models": ["scenario_buildings_isometric", "scenario_fairytale_architecture"],
+        "format": "png_transparent",
+        "resolution": "1024x1024",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "isometric_compatible": true,
+        "tilemap_ready": true
+      },
+      "imaginative_isometrics": {
+        "models": ["scenario_imaginative_isometrics", "scenario_architectural_details"],
+        "format": "png_transparent",
+        "resolution": "512x512",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "detailed_architecture": true,
+        "environment_integration": true
+      }
+    },
+    "ui_interface": {
+      "game_ui_elements": {
+        "models": ["human_interface_game_ui", "scenario_game_interface"],
+        "format": "png_transparent",
+        "resolution": "256x256",
+        "unity_import": "sprite_ui",
+        "shader": "UI/Default",
+        "canvas_scaling": "scale_with_screen_size",
+        "interaction_states": ["normal", "hover", "pressed", "disabled"],
+        "multi_genre_support": true
+      },
+      "ui_frames": {
+        "models": ["scenario_ui_frames_ornate", "scenario_dialogue_frames"],
+        "format": "png_transparent",
+        "resolution": "512x512",
+        "unity_import": "sprite_ui",
+        "shader": "UI/Default",
+        "nine_slice_scaling": true,
+        "themed_variations": ["fantasy", "sci-fi", "medieval", "modern"]
+      },
+      "game_ui_essentials": {
+        "models": ["scenario_game_ui_essentials", "scenario_vibrant_ui"],
+        "format": "png_transparent",
+        "resolution": "256x256",
+        "unity_import": "sprite_ui",
+        "shader": "UI/Default",
+        "component_types": ["buttons", "sliders", "progress_bars", "toggles"],
+        "cartoon_style": true
+      },
+      "card_frames": {
+        "models": ["scenario_card_frames_fantasy", "scenario_card_game_ui"],
+        "format": "png_transparent",
+        "resolution": "256x384",
+        "unity_import": "sprite_ui",
+        "shader": "UI/Default",
+        "card_game_optimized": true,
+        "fantasy_themed": true
+      },
+      "icons": {
+        "juicy_icons": {
+          "model": "juicy_icons_puzzle",
+          "format": "png_transparent",
+          "resolutions": ["32x32", "64x64", "128x128"],
+          "unity_import": "sprite_ui",
+          "usage": "ui_buttons",
+          "style": "clean_puzzle_game"
+        },
+        "minimalist_icons": {
+          "model": "minimalist_icons_modern",
+          "format": "png_transparent", 
+          "resolutions": ["64x64", "128x128", "256x256"],
+          "unity_import": "sprite_ui",
+          "usage": "interface_elements",
+          "style": "smooth_gradient"
+        },
+        "sticker_icons": {
+          "model": "scenario_sticker_2_0",
+          "format": "png_transparent",
+          "resolutions": ["64x64", "128x128"],
+          "unity_import": "sprite_ui",
+          "usage": "playful_ui",
+          "style": "bold_colorful_stickers"
+        },
+        "puffy_icons": {
+          "model": "scenario_puffy_2_0",
+          "format": "png_transparent",
+          "resolutions": ["64x64", "128x128", "256x256"],
+          "unity_import": "sprite_ui",
+          "usage": "premium_ui",
+          "style": "glossy_3d_style"
+        },
+        "digital_icons": {
+          "model": "scenario_colorful_digital",
+          "format": "png_transparent",
+          "resolutions": ["128x128", "256x256"],
+          "unity_import": "sprite_ui",
+          "usage": "rich_visual_ui",
+          "style": "high_detail_vivid"
+        }
+      }
+    },
+    "characters_avatars": {
+      "style_consistent_avatars": {
+        "models": ["character_consistent_generation", "scenario_character_avatars"],
+        "format": "sprite_atlas",
+        "resolution": "256x256",
+        "unity_import": "sprite_multiple",
+        "shader": "Sprites/Default",
+        "animation_ready": true,
+        "pose_variations": ["idle", "walk", "run", "jump", "interact"],
+        "expression_variations": ["neutral", "happy", "surprised", "sad"]
+      },
+      "individual_characters": {
+        "models": ["scenario_individual_characters", "scenario_character_models"],
+        "format": "png_transparent",
+        "resolution": "256x256",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "character_controller_ready": true,
+        "style_consistency_locked": true
+      },
+      "3d_cartoon_characters": {
+        "models": ["scenario_3d_cartoon_character", "scenario_chibi_style"],
+        "format": "png_transparent",
+        "resolution": "256x256",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "chibi_style": true,
+        "3d_compatible": true
+      }
+    },
+    "props_objects": {
+      "3d_blocky_elements": {
+        "models": ["scenario_3d_blocky_elements", "scenario_minimalistic_objects"],
+        "format": "png_transparent",
+        "resolution": "128x128",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "low_poly_style": true,
+        "physics_ready": true
+      },
+      "containers": {
+        "models": ["boxes_crates_loot", "scenario_reward_containers"],
+        "format": "png_transparent",
+        "resolution": "128x128", 
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "interactive_objects": true,
+        "loot_system_ready": true,
+        "opening_animation_ready": true
+      },
+      "vehicles": {
+        "models": ["scenario_rad_racers_chibi", "scenario_vehicles"],
+        "format": "png_transparent",
+        "resolution": "256x128",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "chibi_style": true,
+        "racing_game_ready": true
+      },
+      "cartoon_objects": {
+        "models": ["scenario_cartoon_objects", "scenario_anthropomorphic_items"],
+        "format": "png_transparent",
+        "resolution": "128x128",
+        "unity_import": "sprite",
+        "shader": "Sprites/Default",
+        "anthropomorphized": true,
+        "personality_objects": true,
+        "interactive_ready": true
+      }
+    }
+  },
+  "unity_optimization_settings": {
+    "webgl_target": {
+      "texture_compression": "DXT5",
+      "max_texture_size": 1024,
+      "generate_mipmaps": false,
+      "alpha_handling": "transparency",
+      "memory_optimization": true
+    },
+    "mobile_target": {
+      "texture_compression": "ASTC",
+      "max_texture_size": 512,
+      "generate_mipmaps": true,
+      "alpha_handling": "transparency",
+      "battery_optimization": true
+    },
+    "desktop_target": {
+      "texture_compression": "BC7",
+      "max_texture_size": 2048,
+      "generate_mipmaps": true,
+      "alpha_handling": "transparency",
+      "quality_optimization": true
+    }
+  },
+  "unity_import_templates": {
+    "sprite_2d": {
+      "textureType": "Sprite",
+      "spriteMode": "Single",
+      "alphaIsTransparency": true,
+      "generateMipMaps": false,
+      "maxTextureSize": 1024,
+      "textureCompression": "Normal",
+      "pixelsPerUnit": 100,
+      "pivot": "Bottom"
+    },
+    "ui_sprite": {
+      "textureType": "UI",
+      "spriteMode": "Single",
+      "alphaIsTransparency": true,
+      "generateMipMaps": false,
+      "maxTextureSize": 1024,
+      "textureCompression": "Normal",
+      "pixelsPerUnit": 100,
+      "pivot": "Center"
+    },
+    "pbr_texture": {
+      "textureType": "Default",
+      "alphaIsTransparency": false,
+      "generateMipMaps": true,
+      "maxTextureSize": 1024,
+      "textureCompression": "Normal",
+      "sRGBTexture": true
+    },
+    "normal_map": {
+      "textureType": "Normal map",
+      "alphaIsTransparency": false,
+      "generateMipMaps": true,
+      "maxTextureSize": 1024,
+      "textureCompression": "Normal",
+      "sRGBTexture": false
+    },
+    "cubemap": {
+      "textureType": "Cubemap",
+      "textureShape": "Cube",
+      "generateMipMaps": true,
+      "maxTextureSize": 2048,
+      "textureCompression": "Normal",
+      "sRGBTexture": true
+    }
+  },
+  "unity_component_templates": {
+    "character_2d": {
+      "components": ["SpriteRenderer", "Rigidbody2D", "BoxCollider2D", "Animator"],
+      "rigidbody_settings": {
+        "gravityScale": 3,
+        "freezeRotationZ": true,
+        "drag": 1,
+        "angularDrag": 5
+      },
+      "collider_settings": {
+        "isTrigger": false,
+        "size": {"x": 0.8, "y": 1.6},
+        "offset": {"x": 0, "y": 0.8}
+      }
+    },
+    "interactive_object": {
+      "components": ["SpriteRenderer", "BoxCollider2D"],
+      "collider_settings": {
+        "isTrigger": true,
+        "size": {"x": 1, "y": 1},
+        "offset": {"x": 0, "y": 0}
+      },
+      "interaction_script": "InteractableObject"
+    },
+    "ui_element": {
+      "components": ["Image", "Button"],
+      "button_settings": {
+        "interactable": true,
+        "transition": "ColorTint",
+        "normalColor": {"r": 1, "g": 1, "b": 1, "a": 1},
+        "highlightedColor": {"r": 0.9, "g": 0.9, "b": 0.9, "a": 1},
+        "pressedColor": {"r": 0.8, "g": 0.8, "b": 0.8, "a": 1}
+      }
+    },
+    "environment_object": {
+      "components": ["SpriteRenderer"],
+      "sorting_layer": "Background",
+      "order_in_layer": 0,
+      "physics_material": null
+    }
+  },
+  "generation_workflows": {
+    "complete_unity_game": {
+      "asset_categories": [
+        "environmental.skyboxes",
+        "environmental.textures_materials", 
+        "environmental.platformer_props",
+        "ui_interface.game_ui_elements",
+        "ui_interface.icons.juicy_icons",
+        "ui_interface.icons.minimalist_icons",
+        "characters_avatars.style_consistent_avatars",
+        "props_objects.containers",
+        "props_objects.cartoon_objects"
+      ],
+      "estimated_asset_count": 150,
+      "generation_time_minutes": 30,
+      "unity_ready": true
+    },
+    "ui_focused_game": {
+      "asset_categories": [
+        "ui_interface.game_ui_elements",
+        "ui_interface.ui_frames",
+        "ui_interface.game_ui_essentials",
+        "ui_interface.icons.juicy_icons",
+        "ui_interface.icons.minimalist_icons",
+        "ui_interface.icons.puffy_icons",
+        "characters_avatars.individual_characters"
+      ],
+      "estimated_asset_count": 80,
+      "generation_time_minutes": 15,
+      "ui_system_complete": true
+    },
+    "environmental_focused": {
+      "asset_categories": [
+        "environmental.skyboxes",
+        "environmental.textures_materials",
+        "environmental.buildings", 
+        "environmental.platformer_props",
+        "environmental.imaginative_isometrics",
+        "characters_avatars.style_consistent_avatars"
+      ],
+      "estimated_asset_count": 100,
+      "generation_time_minutes": 25,
+      "environment_complete": true
+    }
+  },
+  "quality_assurance": {
+    "consistency_requirements": {
+      "minimum_consistency_score": 8.5,
+      "batch_consistency_score": 9.0,
+      "cross_category_consistency": 8.8,
+      "unity_compatibility_score": 9.5
+    },
+    "performance_requirements": {
+      "webgl_frame_rate": 60,
+      "memory_usage_mb": 256,
+      "texture_memory_mb": 128,
+      "draw_calls_max": 100
+    },
+    "validation_checks": [
+      "unity_import_successful",
+      "no_console_errors", 
+      "materials_assigned",
+      "sprites_configured",
+      "prefabs_functional",
+      "scene_assembly_complete"
+    ]
+  }
+}

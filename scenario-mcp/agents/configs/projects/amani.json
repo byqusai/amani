@@ -1,0 +1,85 @@
+{
+  "name": "Amani",
+  "project_type": "unity_game",
+  "target_audience": "children_8_14",
+  "platform": "unity_webgl",
+  "description": "Educational game focusing on children's skills development",
+  "art_approaches": {
+    "approach_a_child_friendly": {
+      "name": "Child-Friendly Colorful",
+      "description": "Bright, colorful, approachable art style perfect for children",
+      "style_modifier": "colorful cartoon style, child-friendly, bright vibrant colors, friendly characters, educational game aesthetic",
+      "target_emotion": "Joy, curiosity, learning enthusiasm",
+      "cultural_elements": [
+        "Educational",
+        "Child development",
+        "Learning games"
+      ],
+      "technical_focus": "Bright colors with educational clarity",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_b_educational_modern": {
+      "name": "Educational Modern",
+      "description": "Modern educational aesthetic with clean design principles",
+      "style_modifier": "modern educational design, clean interface, learning-focused, contemporary children's media style",
+      "target_emotion": "Focus, engagement, modern learning",
+      "cultural_elements": [
+        "Modern education",
+        "Digital learning",
+        "Contemporary design"
+      ],
+      "technical_focus": "Clean modern aesthetics for learning",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_c_playful_minimalist": {
+      "name": "Playful Minimalist",
+      "description": "Simple, clean design with playful elements for focus",
+      "style_modifier": "minimalist children's design, simple shapes, playful colors, clean educational interface",
+      "target_emotion": "Calm focus, playful learning, clarity",
+      "cultural_elements": [
+        "Minimalist education",
+        "Focus-friendly",
+        "Simple learning"
+      ],
+      "technical_focus": "Minimalist with playful educational elements",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    }
+  },
+  "asset_categories": [
+    "Educational Characters",
+    "Learning UI Elements",
+    "Skill Development Items",
+    "Educational Environments",
+    "Progress Indicators",
+    "Interactive Elements"
+  ],
+  "cultural_elements": [
+    "Child development",
+    "Educational gaming",
+    "Learning psychology"
+  ],
+  "technical_constraints": {
+    "platform": "Unity WebGL",
+    "performance": "optimized_for_web",
+    "accessibility": "child_friendly_ui",
+    "color_requirements": "high_contrast_for_learning"
+  }
+}

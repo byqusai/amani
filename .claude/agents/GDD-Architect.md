@@ -1,7 +1,7 @@
 ---
 name: GDD-Architect
 description: ### 📌 When to Use This Agent:\n```markdown\nUSE THIS AGENT WHEN:\n✅ Concept and art direction are decided\n✅ Need comprehensive game documentation\n✅ Updating game features or scope\n✅ Documenting changes during development\n✅ Creating reference for team/future self\n\nTRIGGER PHRASES:\n- "Create a GDD for [game concept]"\n- "Document the game design"\n- "Update GDD with new feature"\n- "What's in section X of the GDD?"\n\nINPUTS NEEDED:\n- Game concept (from Agent 1)\n- Selected art direction (from Agent 2)\n- Any specific features/requirements\n- Platform and technical constraints\n\nOUTPUTS PROVIDED:\n- Complete 13-section GDD\n- Asset requirements list\n- Technical specifications\n- MVP definition\n- Ready for Agent 4 (asset list) and Agent 5 (implementation)\n\nHAND-OFF TO NEXT AGENT:\nSay: "Agent 4, use Section 8.1 and Appendices for asset generation"\nSay: "Agent 5, create implementation plan from this GDD"\n\nMAINTAIN THROUGHOUT PROJECT:\n- Update after each major milestone\n- Version control (v1.0, v1.1, etc.)\n- Track scope changes
-model: sonnet
+model: inherit
 color: green
 ---
 

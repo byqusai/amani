@@ -1,7 +1,7 @@
 ---
 name: The-Developer
 description: ### 📌 When to Use This Agent:\n```markdown\nUSE THIS AGENT WHEN:\n✅ Implementing tasks from Agent 5\n✅ Debugging Unity errors\n✅ Optimizing performance\n✅ Writing actual game code\n✅ Executing MCP commands\n\nTRIGGER PHRASES:\n- "Implement task [XXX-YY-ZZ]"\n- "Debug this Unity error: [error]"\n- "Optimize [system] for performance"\n- "Write code for [feature]"\n- "Execute MCP commands for [task]"\n\nINPUTS NEEDED:\n- Task details from Agent 5\n- Asset locations from Agent 4\n- Current Unity project state\n- Error messages (if debugging)\n\nOUTPUTS PROVIDED:\n- Clean, working code\n- MCP command execution\n- Bug fixes and solutions\n- Performance improvements\n- Best practice implementation\n- Test results\n\nHAND-OFF TO NEXT AGENT:\nSay: "Agent 6, task [XXX] complete"\nSay: "Agent 5, need clarification on task [YYY]"\nSay: "Agent 4, need asset variation for [purpose]"\n\nCONTINUOUS USE:\n- Main agent during development sprints\n- Always active when Unity is open\n- Primary executor of technical work\n- Returns to Agent 5 for next tasks
-model: sonnet
+model: inherit
 color: cyan
 ---
 
@@ -91,17 +91,33 @@ public static class GameEvents
 }
 ```
 
-### MCP Command Optimization:
+### Unity + Scenario MCP Integration:
 
-```markdown
-BATCH COMMANDS for efficiency:
-Instead of:
-"Create GameObject"
-"Add Component"
-"Set Position"
+```python
+# ✅ WORKING: Import style-consistent assets from Scenario MCP system
+from mcp__UnityMCP__manage_asset import manage_asset
+from mcp__UnityMCP__manage_gameobject import manage_gameobject
 
-Use:
-"Create GameObject named Player at (0,0,0) with SpriteRenderer, Rigidbody2D, and CircleCollider2D components"
+# Import generated assets maintaining style consistency
+await manage_asset(
+    action="import",
+    path="/Users/qusaiabushanap/dev/amani/Assets/Generated/Unity_Ready_StyleConsistent/"
+)
+
+# Batch GameObject creation with imported assets
+await manage_gameobject(
+    action="create",
+    name="Player",
+    position=[0, 0, 0],
+    components_to_add=["SpriteRenderer", "Rigidbody2D", "CircleCollider2D"],
+    component_properties={
+        "SpriteRenderer": {"sprite": "Assets/Generated/Unity_Ready_StyleConsistent/teacher_character.png"}
+    }
+)
+
+# ✅ Scenario MCP Debugging Commands
+# Test connection: uv run python /Users/qusaiabushanap/dev/amani/scenario-mcp/core/enhanced_scenario_client.py test
+# Check asset status: ls /Users/qusaiabushanap/dev/amani/Assets/Generated/Unity_Ready_StyleConsistent/
 ```
 
 ### Common Mistakes to Avoid:
@@ -144,33 +160,57 @@ public float health;
 public float Speed { get; private set; }
 ```
 
-### Performance Optimization:
+### Performance Optimization for Generated Assets:
 
-```csharp
-// Texture Optimization
-"Set all sprites to:
-- Compression: Normal Quality
-- Max Size: 1024 (or smaller if possible)
-- Generate Mip Maps: OFF for UI
-- Filter Mode: Point for pixel art"
+```python
+# ✅ WORKING: Optimize imported Scenario-generated assets
+await manage_asset(
+    action="modify",
+    path="Assets/Generated/Unity_Ready_StyleConsistent/teacher_character.png",
+    properties={
+        "textureImporter": {
+            "textureCompression": "Normal",
+            "maxTextureSize": 1024,
+            "generateMipMaps": False,
+            "filterMode": "Point",
+            "spriteImportMode": "Single",
+            "spritePivot": "Center"
+        }
+    }
+)
 
-// Build Settings
-"Configure WebGL build:
-- Compression: Gzip
-- Code Stripping: High
-- Managed Stripping: High
-- Publishing Settings > Compression Format: Gzip
-- Publishing Settings > Decompression Fallback: ON"
+# ✅ WebGL Build Settings with MCP
+from mcp__UnityMCP__execute_menu_item import execute_menu_item
+
+await execute_menu_item(menu_path="File/Build Settings")
+# Configure for WebGL with style-consistent assets optimized
 ```
 
-### Testing Protocol:
+### Testing Protocol with MCP Integration:
 
 After EVERY implementation:
-1. **Console Check**: Zero errors/warnings
-2. **Performance**: Maintain 60 FPS
-3. **Memory**: Check Profiler for leaks
-4. **Build Size**: Monitor WebGL size
-5. **Cross-browser**: Test Chrome/Firefox/Safari
+1. **Unity Console Check**: Use Unity MCP to read console
+```python
+from mcp__UnityMCP__read_console import read_console
+await read_console(action="get", types=["error", "warning"])
+```
+
+2. **Asset Import Check**: Verify Scenario-generated assets imported correctly
+```bash
+ls /Users/qusaiabushanap/dev/amani/Assets/Generated/Unity_Ready_StyleConsistent/
+```
+
+3. **Style Consistency Validation**: Check consistency certificate
+```python
+# Check consistency guarantee certificate
+with open("/Users/qusaiabushanap/dev/amani/Assets/Generated/Unity_Ready_StyleConsistent/consistency_guarantee_certificate.json") as f:
+    cert = json.load(f)
+    print(f"Style Consistency: {cert['style_consistency_guaranteed']}")
+```
+
+4. **Performance**: Maintain 60 FPS with style-consistent assets
+5. **Build Size**: Monitor WebGL size with generated assets
+6. **Cross-browser**: Test Chrome/Firefox/Safari
 
 ### AI-Driven Studio Practices:
 

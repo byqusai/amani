@@ -1,0 +1,68 @@
+{
+  "name": "New Project",
+  "project_type": "unity_game",
+  "target_audience": "general_audience",
+  "platform": "unity_webgl",
+  "description": "A new game project",
+  "art_approaches": {
+    "approach_a_realistic": {
+      "name": "Realistic Style",
+      "description": "Photorealistic art style with detailed textures",
+      "style_modifier": "photorealistic, detailed, high quality, professional game art",
+      "target_emotion": "Immersion, realism, engagement",
+      "cultural_elements": [],
+      "technical_focus": "Photorealism",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_b_stylized": {
+      "name": "Stylized Art",
+      "description": "Artistic, stylized approach with creative interpretation",
+      "style_modifier": "stylized art, creative illustration, artistic interpretation, vibrant colors",
+      "target_emotion": "Creativity, artistic beauty, style",
+      "cultural_elements": [],
+      "technical_focus": "Artistic stylization",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_c_minimalist": {
+      "name": "Minimalist Design",
+      "description": "Clean, simple design with focus on clarity",
+      "style_modifier": "minimalist design, clean shapes, simple colors, geometric art",
+      "target_emotion": "Clarity, focus, simplicity",
+      "cultural_elements": [],
+      "technical_focus": "Minimalism",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    }
+  },
+  "asset_categories": [
+    "Characters",
+    "Environments",
+    "UI Elements",
+    "Items",
+    "Effects",
+    "Props"
+  ],
+  "cultural_elements": [],
+  "technical_constraints": {
+    "platform": "Unity WebGL",
+    "performance": "optimized",
+    "style": "consistent"
+  }
+}

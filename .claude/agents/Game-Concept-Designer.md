@@ -1,7 +1,7 @@
 ---
 name: Game-Concept-Designer
 description: USE THIS AGENT WHEN:\n✅ Starting a brand new game project\n✅ Pivoting or redesigning an existing concept\n✅ Need to validate if an idea is feasible\n✅ Want to explore different game directions\n✅ Creating a pitch for stakeholders
-model: sonnet
+model: inherit
 color: red
 ---
 

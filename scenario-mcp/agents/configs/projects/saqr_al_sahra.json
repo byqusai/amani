@@ -1,0 +1,104 @@
+{
+  "name": "Saqr Al-Sahra (Saudi Falcon Desert Adventure)",
+  "project_type": "unity_game",
+  "target_audience": "general_casual_players",
+  "platform": "unity_webgl",
+  "description": "Traditional Saudi Falcon (Peregrine Falcon) Flappy Bird game set in authentic Arabian desert environments. Features falconry bells, desert wildlife, and Saudi cultural elements.",
+  "art_approaches": {
+    "approach_a_heritage_realism": {
+      "name": "Saudi Heritage Realism",
+      "description": "Authentic Saudi Peregrine Falcon with realistic desert environments, traditional falconry elements, and cultural authenticity focusing on natural beauty of the Arabian Peninsula.",
+      "style_modifier": "realistic Saudi falcon, Arabian desert landscape, traditional falconry, golden hour lighting, authentic Saudi cultural elements, detailed feather textures, desert wildlife, natural earth tones",
+      "target_emotion": "Cultural pride, natural beauty, authentic heritage",
+      "cultural_elements": [
+        "Saudi Peregrine Falcon (Saqr)",
+        "Traditional falconry bells (manjul)",
+        "Arabian desert dunes",
+        "Desert oases with date palms",
+        "Sandstone rock formations",
+        "Desert wildlife authenticity",
+        "Golden desert light"
+      ],
+      "technical_focus": "Realistic textures with authentic Saudi desert atmosphere",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7.5,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_b_cultural_stylized": {
+      "name": "Stylized Arabian Adventure",
+      "description": "Appealing cartoon-style Saudi falcon with vibrant desert environments, maintaining cultural authenticity while optimizing for game appeal and broad accessibility.",
+      "style_modifier": "stylized cartoon Saudi falcon, vibrant Arabian desert, colorful oasis scenes, friendly desert adventure, traditional cultural patterns, warm sunset colors, approachable game art style",
+      "target_emotion": "Adventure, cultural curiosity, approachable fun",
+      "cultural_elements": [
+        "Stylized Saudi falcon character",
+        "Colorful Arabian desert",
+        "Traditional geometric patterns",
+        "Desert adventure theme",
+        "Cultural motifs and symbols",
+        "Warm Arabian color palette",
+        "Accessible cultural representation"
+      ],
+      "technical_focus": "Stylized art balancing appeal with cultural authenticity",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_c_modern_minimalist": {
+      "name": "Modern Saudi Minimalist",
+      "description": "Clean minimalist design with subtle Saudi cultural influences, focusing on geometric patterns inspired by traditional Islamic art and contemporary Saudi design sensibility.",
+      "style_modifier": "minimalist Saudi design, clean geometric shapes, modern Islamic patterns, simplified falcon silhouette, contemporary Saudi aesthetic, gold and earth tone palette, elegant simplicity",
+      "target_emotion": "Modern sophistication, elegant simplicity, cultural refinement",
+      "cultural_elements": [
+        "Modern Saudi design language",
+        "Islamic geometric patterns",
+        "Minimalist falcon representation",
+        "Contemporary Arabic aesthetics",
+        "Clean architectural influences",
+        "Sophisticated color schemes",
+        "Modern cultural identity"
+      ],
+      "technical_focus": "Minimalist design with sophisticated cultural elements",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 6.5,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    }
+  },
+  "asset_categories": [
+    "Saudi Falcon Character (with falconry bells)",
+    "Arabian Desert Environments",
+    "Traditional UI Elements",
+    "Desert Wildlife Objects",
+    "Cultural Pattern Elements",
+    "Oasis and Water Features",
+    "Sandstone Obstacles",
+    "Traditional Game UI"
+  ],
+  "cultural_elements": [
+    "Saudi Arabian heritage",
+    "Traditional falconry culture",
+    "Arabian Peninsula geography",
+    "Desert ecosystem authenticity",
+    "Islamic artistic patterns",
+    "Saudi national identity",
+    "Bedouin cultural elements"
+  ],
+  "technical_constraints": {
+    "platform": "Unity WebGL",
+    "performance": "optimized_for_web",
+    "accessibility": "culturally_authentic",
+    "color_requirements": "desert_themed_palette",
+    "cultural_sensitivity": "respectful_saudi_representation"
+  }
+}

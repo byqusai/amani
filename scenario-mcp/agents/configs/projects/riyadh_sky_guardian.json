@@ -1,0 +1,89 @@
+{
+  "name": "Riyadh Sky Guardian",
+  "project_type": "unity_game",
+  "target_audience": "general_audience",
+  "platform": "unity_webgl",
+  "description": "Cultural action game featuring Saudi Arabian themes and landmarks",
+  "art_approaches": {
+    "approach_a_heritage_realism": {
+      "name": "Heritage Realism",
+      "description": "Photorealistic falcon with authentic Saudi architectural accuracy",
+      "style_modifier": "photorealistic, ultra-detailed, architectural photography style, traditional falconry, cultural authenticity, National Geographic quality",
+      "target_emotion": "Pride, authenticity, cultural reverence",
+      "cultural_elements": [
+        "Traditional falconry",
+        "Authentic architecture",
+        "Desert landscapes",
+        "Cultural patterns"
+      ],
+      "technical_focus": "Photorealism with cultural accuracy",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_b_cultural_stylized": {
+      "name": "Cultural Stylized",
+      "description": "Artistic interpretation with traditional Saudi patterns and vibrant colors",
+      "style_modifier": "stylized illustration, islamic geometric patterns, traditional Saudi art style, vibrant desert colors, ornamental design, cultural motifs",
+      "target_emotion": "Cultural pride, artistic beauty, heritage celebration",
+      "cultural_elements": [
+        "Islamic geometry",
+        "Traditional patterns",
+        "Desert colors",
+        "Cultural ornaments"
+      ],
+      "technical_focus": "Stylized art with cultural authenticity",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    },
+    "approach_c_modern_minimalist": {
+      "name": "Modern Minimalist",
+      "description": "Clean, contemporary aesthetic with subtle Saudi cultural accents",
+      "style_modifier": "minimalist design, clean geometric shapes, flat colors, contemporary art style, modern Saudi Vision 2030 aesthetic, subtle cultural elements",
+      "target_emotion": "Modern sophistication, clean elegance, future vision",
+      "cultural_elements": [
+        "Vision 2030 aesthetics",
+        "Modern architecture",
+        "Geometric subtlety",
+        "Contemporary Saudi"
+      ],
+      "technical_focus": "Minimalist with cultural subtlety",
+      "locked_parameters": {
+        "steps": 30,
+        "cfg_scale": 7,
+        "seed_base": 42,
+        "width": 512,
+        "height": 512
+      }
+    }
+  },
+  "asset_categories": [
+    "Saudi Falcon Character",
+    "Riyadh Landmarks",
+    "Cultural UI Elements",
+    "Desert Environments",
+    "Traditional Patterns",
+    "Modern Saudi Architecture"
+  ],
+  "cultural_elements": [
+    "Saudi Arabian heritage",
+    "Falconry tradition",
+    "Islamic art patterns",
+    "Vision 2030"
+  ],
+  "technical_constraints": {
+    "platform": "Unity WebGL",
+    "cultural_accuracy": "high_priority",
+    "authenticity": "required",
+    "modern_integration": "vision_2030_aligned"
+  }
+}
