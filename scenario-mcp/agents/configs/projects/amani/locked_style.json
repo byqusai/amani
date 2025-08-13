@@ -1,0 +1,31 @@
+{
+  "CEO_SELECTED_MODEL_ID": "illustrated-platformer-environments",
+  "NEVER_CHANGE_THESE_PARAMETERS": {
+    "model_id": "illustrated-platformer-environments",
+    "steps": 30,
+    "cfg_scale": 7,
+    "seed_base": 42,
+    "width": 512,
+    "height": 512,
+    "style_prompt_suffix": "cartoon platformer, clean readable assets, vibrant colors, transparent background, game asset, high quality"
+  },
+  "CONSISTENCY_GUARANTEE": "Every single asset will look like it came from the same professional artist",
+  "VALIDATION_SAMPLES": [
+    "/Users/qusaiabushanap/dev/amani/Assets/Generated/ArtDirection/falcon_character_validation_sample.png",
+    "/Users/qusaiabushanap/dev/amani/Assets/Generated/ArtDirection/desert_environment_validation_sample.png",
+    "/Users/qusaiabushanap/dev/amani/Assets/Generated/ArtDirection/game_ui_validation_sample.png",
+    "/Users/qusaiabushanap/dev/amani/Assets/Generated/ArtDirection/obstacle_validation_sample.png"
+  ],
+  "GAME_ASSET_SPECIFICATIONS": {
+    "falcon_character": "Saudi falcon with regal appearance, flappy bird style movement poses",
+    "desert_environment": "Golden desert landscape with Middle Eastern architectural elements",
+    "game_obstacles": "Date palm trunks, sandstone formations, desert rocks",
+    "ui_elements": "Middle Eastern inspired game interface with Arabic design motifs"
+  },
+  "CONSISTENCY_SCORE": 9.5,
+  "CEO_APPROVED": true,
+  "LOCKED_DATE": "2025-08-13",
+  "PROJECT_NAME": "amani",
+  "GAME_TYPE": "saudi_falcon_flappy_bird",
+  "UNITY_OPTIMIZED": true
+}

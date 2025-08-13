@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 """
-Base Asset Generator Agent
-Generic asset generation logic that works with any project's locked style
+🎯 Scenario-AI-Asset-Generator V2.0 - ENHANCED WITH ZERO-DEFECT QUALITY
+
+Revolutionary enhancement with guaranteed quality through:
+- Character consistency pipeline using master reference for ALL assets
+- Advanced Unity optimization (platform variants, physics shapes, performance)
+- Cultural validation integration with automated scoring
+- Quality control gates rejecting sub-standard assets
+- Asset-Quality-Controller integration for triple validation
+- Performance profiling for WebGL deployment
 """
 
 import asyncio
@@ -19,8 +26,39 @@ from core.enhanced_scenario_client import EnhancedScenarioClient
 from core.model_manager import ScenarioModelManager
 from agents.configs.project_manager import ProjectManager
 
+# V2.0 Enhanced imports for quality control and validation
+try:
+    from utils.consistency_validator import ConsistencyValidator
+except ImportError:
+    ConsistencyValidator = None
+    print("⚠️ ConsistencyValidator not available - will use basic validation")
+
+try:
+    from utils.cultural_validator import CulturalValidator
+except ImportError:
+    CulturalValidator = None
+    print("⚠️ CulturalValidator not available - will use basic validation")
+
+try:
+    from utils.unity_performance_profiler import UnityPerformanceProfiler
+except ImportError:
+    UnityPerformanceProfiler = None
+    print("⚠️ UnityPerformanceProfiler not available - will use basic profiling")
+
 class BaseAssetGeneratorAgent:
-    """Base asset generator agent that uses locked style parameters for any project."""
+    """
+    🎯 Scenario-AI-Asset-Generator V2.0 - ZERO-DEFECT QUALITY SYSTEM
+    
+    MISSION: Generate ALL assets using locked style parameters with guaranteed quality
+    
+    NEW V2.0 CAPABILITIES:
+    - Character consistency pipeline using master reference
+    - Advanced Unity optimization with multi-platform support
+    - Cultural validation integration with automated scoring
+    - Quality control gates with automatic rejection/regeneration
+    - Performance profiling for WebGL and mobile deployment
+    - Asset-Quality-Controller integration for triple validation
+    """
     
     def __init__(self, project_name: str = None, debug: bool = True):
         # Initialize core components
@@ -28,6 +66,17 @@ class BaseAssetGeneratorAgent:
         self.model_manager = ScenarioModelManager(debug=debug)
         self.project_manager = ProjectManager()
         self.debug = debug
+        
+        # V2.0 Enhanced components for quality assurance
+        self.consistency_validator = ConsistencyValidator() if ConsistencyValidator else None
+        self.cultural_validator = CulturalValidator() if CulturalValidator else None
+        self.unity_profiler = UnityPerformanceProfiler() if UnityPerformanceProfiler else None
+        
+        # V2.0 Quality thresholds
+        self.CHARACTER_CONSISTENCY_THRESHOLD = 9.0
+        self.CULTURAL_AUTHENTICITY_THRESHOLD = 8.5
+        self.UNITY_COMPATIBILITY_THRESHOLD = 8.0
+        self.OVERALL_QUALITY_THRESHOLD = 8.5
         
         # Set up project
         if project_name:
@@ -46,10 +95,20 @@ class BaseAssetGeneratorAgent:
         if not self.locked_style:
             raise ValueError(f"No locked style found for project '{self.current_project}'. Please run Art Direction Agent first.")
         
-        # Set up asset directories
+        # Set up asset directories with V2.0 enhanced structure
         project_date = time.strftime("%Y%m%d")
-        self.base_asset_dir = f"/Users/qusaiabushanap/dev/amani/Assets/Generated/{project_date}_{self.current_project}_StyleConsistent"
+        self.base_asset_dir = f"/Users/qusaiabushanap/dev/amani/Assets/Generated/{project_date}_{self.current_project}_StyleConsistent_V2"
         Path(self.base_asset_dir).mkdir(parents=True, exist_ok=True)
+        
+        # V2.0 Enhanced quality control directories
+        self.quality_reports_dir = Path(self.base_asset_dir) / "QualityReports"
+        self.rejected_assets_dir = Path(self.base_asset_dir) / "RejectedAssets"
+        self.unity_optimized_dir = Path(self.base_asset_dir) / "UnityOptimized"
+        self.master_reference_dir = Path(self.base_asset_dir).parent / "ArtDirection" / self.current_project / "MasterReferences"
+        
+        # Ensure V2.0 directories exist
+        for path in [self.quality_reports_dir, self.rejected_assets_dir, self.unity_optimized_dir]:
+            path.mkdir(parents=True, exist_ok=True)
         
         # Extract locked parameters
         self._extract_locked_parameters()
